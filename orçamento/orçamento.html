@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="icon" href="fotos/favicon.ico">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
+	<script src="bootstrap.js"</script>
+	<script type="text/javascript">
+	$('.carousel').carousel()
+	$('carousel-example-generic').on('slide.bs.carousel', function () {
+		interval: 3000;
+	})
+	
+	$('#myAffix').affix({	
+  offset: {
+    top: 193,
+    bottom: function () {
+      return (this.bottom = $('.footer').outerHeight(true))
+    }
+	}
+	})
+	</script>
+    <title>Montebanc - Construção Civil e Montagem</title>	
+
+</head>
+<body>
+
+
+	<header id="topo">
+	<img class="logoescrita" src="fotos/montebanc.png" alt="">
+		<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+            <ul><!--
+                --><li class="menuinicio"><a href="../index.html">INÍCIO</a></li><!--
+                --><li class="menuprodutos"><a href="../serviços/serviços.html">SERVIÇOS</a></li><!--	
+                --><li class="menuorcamento"><a href="../orçamento/orçamento.html">ORÇAMENTO</a></li>
+					
+            </ul>
+		</nav>
+    </header>
+	
+    <h2> FAÇA SEU ORÇAMENTO </h2>
+
+	
+	
+	
+	<div id="form">
+	
+	<h3>
+		<p>Envie-nos um orçamento, e o mais breve possível entraremos em contato !</p> </h3>
+		
+		<form id="formulario" action="form.php" method="post" name="form">	
+		
+		
+		<fieldset>
+			<p class="nome">
+				<label 	for="nome">Nome <font color="rgb(65,71,124)">*</font></label><br>
+				<input 	type="text" name="nome" id="nome" autocomplete="off" required size="80">
+			</p>
+			<p class="email" id="email">
+				<label	for="email">E-mail <font color="rgb(65,71,124)">*</font></label><br>
+				<input	type="text" name="email" id="email" autocomplete="off" required size="80">
+			</p>  
+			<p class="endereço" id="endereço">
+				<label	for="endereço">Endereço</label><br>
+				<input	type="text" name="endereço" id="endereço" autocomplete="off" size="51">
+			</p>
+			<p class="bairro" id="bairro">
+				<label	for="bairro">Bairro</label><br>
+				<input	type="text" name="bairro" id="bairro" autocomplete="off" size="22">
+			</p>
+			<p class="cidade" id="cidade">
+				<label	for="cidade">Cidade</label><br>
+				<input	type="text" name="cidade" id="cidade" autocomplete="off" size="40">
+			</p>
+			<p class="uf" id="uf">
+				<label	for="uf">UF</label><br>
+				<input	type="text" name="email" id="email" autocomplete="off" size="2">
+			</p>
+			<p class="cep" id="cep">
+				<label	for="cep">CEP</label><br>
+				<input	type="text" name="cep" id="cep" autocomplete="off" size="22">
+			</p>
+			<br>
+			<p class="telefone" id="telefone">
+				<label 	for="telefone">DDD / Telefone <font color="rgb(65,71,124)">*</font></label><br>
+                <input 	type="text" name="telefone" 
+						placeholder="(00) 0000-0000" pattern="(\(0?\d{2}\)|0?\d{2}) ?9?\d{4}[.-]?\d{4}"
+						id="telefone" required size="22">
+			</p>
+			<p class="celular" id="celular">
+				<label 	for="telefone">DDD / Celular <font color="rgb(65,71,124)">*</font></label><br>
+                <input 	type="text" name="telefone" 
+						placeholder="(00) 0000-0000" pattern="(\(0?\d{2}\)|0?\d{2}) ?9?\d{4}[.-]?\d{4}"
+						id="telefone" required size="22">
+			</p>
+			<p class="comercial" id="comercial">
+				<label 	for="telefone">DDD / Tel. Com.</label><br>
+                <input 	type="text" name="telefone" 
+						placeholder="(00) 0000-0000" pattern="(\(0?\d{2}\)|0?\d{2}) ?9?\d{4}[.-]?\d{4}"
+						id="telefone" size="22">
+			</p>
+			<p class="empresa" id="empresa">
+				<label 	for="empresa">Empresa</label><br>
+				<input 	type="text" name="empresa" id="empresa" autocomplete="off" size="52">
+			</p>
+			<p class="cnpj">
+				<label 	for="cnpj" id="cnpj">CNPJ</label><br>
+				<input 	type="text" name="cnpj" id="cnpj" autocomplete="off" size="22">
+			</p>
+			<p class="serviços" id="serviços">
+            <label for="serviços">Tipo de Produto/Serviço <font color="rgb(65,71,124)">*</font></label><br>
+            <select name="serviços" id="serviços" required">
+                <option value="">Selecione</option>
+				<option value="PRO">Fundações</option>
+                <option value="SAI">Estruturas</option>
+                <option value="OXI">Alvenaria</option>
+                <option value="PRE">Instalações</option>
+                <option value="EQU">Revestimento</option>
+				<option value="INT">Impermeabilização</option>
+				<option value="SEL">Instalações Hospitalares (descreva abaixo)</option>
+
+			</select>
+			</p>
+			<p class="descrição" id="descrição">
+				<label for="descricao">Descrição do Orçamento</label><br>	
+				<textarea rows="5" cols="30" name="descricao"
+                id="descrição"></textarea>
+			</p>
+			 <p class="enviar" id="limpar">
+				<input type="submit" class="enviarb" value="Enviar"/> 
+			</p>
+			<p class="limpar" id="limpar">
+				<button type="reset" class="limparb">Limpar</button>
+				<input type="hidden" class="limpar" value="42"/> 
+			</p>
+	
+		</fieldset>
+		</form>
+	</div>	
+
+
+
+	
+	
+    <footer>
+        <p>Montebanc &copy; 2016 / Desenvolvimento NewVision</p>
+    </footer>
+</body>
+</html>
